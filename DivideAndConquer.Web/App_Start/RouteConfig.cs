@@ -1,12 +1,18 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace DivideAndConquer
 {
-  public class RouteConfig
+  public static class RouteConfig
   {
     public static void RegisterRoutes( RouteCollection routes )
     {
+      if( routes == null )
+      {
+        throw new ArgumentNullException( "routes" );
+      }
+
       routes.IgnoreRoute( "{resource}.axd/{*pathInfo}" );
       routes.MapRoute(
         name: "Default",
@@ -17,7 +23,7 @@ namespace DivideAndConquer
             action = "Index",
             id = UrlParameter.Optional
           },
-        namespaces: new[] { "DivideAndConquer.Areas.Navigation.Controllers" }
+        namespaces: new[] { "DivideAndConquer.AreaNames.Navigation.Controllers" }
         );
     }
   }

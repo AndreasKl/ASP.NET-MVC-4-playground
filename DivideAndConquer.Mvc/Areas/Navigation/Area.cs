@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace DivideAndConquer.Areas.Home
 {
@@ -6,6 +7,11 @@ namespace DivideAndConquer.Areas.Home
   {
     public override void RegisterArea( AreaRegistrationContext context )
     {
+      if( context == null )
+      {
+        throw new ArgumentNullException("context");
+      }
+
       context.MapRoute(
         "Navigation_default",
         "Navigation/{controller}/{action}/{id}",
@@ -15,7 +21,7 @@ namespace DivideAndConquer.Areas.Home
             action = "Index",
             id = UrlParameter.Optional
           },
-        namespaces: new[] { "DivideAndConquer.Areas.Navigation.Controllers" }
+        namespaces: new[] { "DivideAndConquer.AreaNames.Navigation.Controllers" }
         );
     }
 
@@ -23,7 +29,7 @@ namespace DivideAndConquer.Areas.Home
     {
       get
       {
-        return "Navigation";
+        return AreaNames.Navigation;
       }
     }
   }
