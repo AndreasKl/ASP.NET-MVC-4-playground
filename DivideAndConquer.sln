@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideAndConquer.Root", "DivideAndConquer.Root\DivideAndConquer.Root.csproj", "{C2021280-4630-47F0-83DE-7539DBA0C2DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideAndConquer.Web", "DivideAndConquer.Root\DivideAndConquer.Web.csproj", "{C2021280-4630-47F0-83DE-7539DBA0C2DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideAndConquer.Controllers", "DivideAndConquer.Controllers\DivideAndConquer.Controllers.csproj", "{D50F1C96-8C4B-4077-8506-9D6B5E12DB7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideAndConquer.Mvc", "DivideAndConquer.Controllers\DivideAndConquer.Mvc.csproj", "{D50F1C96-8C4B-4077-8506-9D6B5E12DB7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AD926831-5FB5-4542-954E-5BD49E6F6A82}"
 	ProjectSection(SolutionItems) = preProject
